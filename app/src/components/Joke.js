@@ -14,8 +14,8 @@ const Joke = ({ getJoke, joke, isFetching }) => {
 
   return (
     <>
-      <h2>Dad joke: {joke} </h2>
-      <button onClick={getJoke}>Get new joke</button>
+      <h2>Character Name: {joke} </h2>
+      {/* <button onClick={getJoke}>Get new joke</button> */}
     </>
   );
 };

@@ -7,6 +7,7 @@ import thunk from "redux-thunk";
 
 import Title from "./components/Title";
 import Joke from "./components/Joke";
+import IMG from "./components/IMG"
 import "./styles.css";
 
 // Step 1: create the store
@@ -16,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <Title />
+      <IMG />
       <Joke />
     </div>
   );

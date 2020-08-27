@@ -5,7 +5,10 @@ import {
     TOGGLE_EDITING,
     FETCHING_JOKE_START,
     FETCHING_JOKE_SUCCESS,
-    FETCHING_JOKE_ERROR
+    FETCHING_JOKE_ERROR,
+    FETCHING_IMG_START,
+    FETCHING_IMG_SUCCESS,
+    FETCHING_IMG_ERROR
   } from "../actions";
   
   const initialState = {
@@ -30,7 +33,7 @@ import {
           editing: !state.editing
         };
       case FETCHING_JOKE_START:
-        console.log("fetching a new joke");
+        console.log("fetching a name");
         return {
           ...state,
           isFetching: true
@@ -38,6 +41,16 @@ import {
       case FETCHING_JOKE_SUCCESS:
         return { ...state, joke: action.payload, isFetching: false };
       case FETCHING_JOKE_ERROR:
+        return { ...state, error: action.payload, isFetching: false };
+        case FETCHING_IMG_START:
+        console.log("fetching a name");
+        return {
+          ...state,
+          isFetching: true
+        };
+      case FETCHING_IMG_SUCCESS:
+        return { ...state, img: action.payload, isFetching: false };
+      case FETCHING_IMG_ERROR:
         return { ...state, error: action.payload, isFetching: false };
       default:
         return state;
